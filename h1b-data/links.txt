@@ -1,0 +1,6 @@
+https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2022.csv
+https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2021.csv
+https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2020.csv
+https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2019.csv
+https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2018.csv
+https://www.uscis.gov/sites/default/files/document/data/h1b_datahubexport-2017.csv
