@@ -42,7 +42,10 @@
 
     const loadH1BInfo = () => {
         // get the DOM of employers listed in JOB page
-        let employers = document.getElementsByClassName("job-card-container__company-name")
+        let employers = document.getElementsByClassName("job-card-container__company-name");
+        if (employers.length == 0) {
+            employers = document.getElementsByClassName("job-card-container__primary-description");
+        }
         let employer;
         let words;
         let filtered_words;
@@ -60,7 +63,9 @@
                     words = employer.split(' ')
                     filtered_words = words.filter(word => !stopwords.includes(word));
                     employer = filtered_words.join(" ");
-                    h1b_filed = binarySearch(response.data[employer[0]], employer);
+                    if (response.data.hasOwnProperty(employer[0])) {
+                        h1b_filed = binarySearch(response.data[employer[0]], employer);
+                    }
                     h1b_info = document.createElement("div")
 
                     h1b_info.innerHTML = 'Filed ' + h1b_filed.toString() + ' applications in past 5 years'
@@ -90,7 +95,7 @@
                 low = mid + 1;
             } else if (current > target) {
                 high = mid - 1;
-            } else {
+            } else if (data[mid][0] !== "#stopwords@"){
                 return data[mid][1]; // Return the sub-list containing the employer name and number of employees
             }
         }

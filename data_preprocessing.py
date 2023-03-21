@@ -45,6 +45,7 @@ for k, v in employers_filed_h1b.items():
     clean_employers_h1b_filed[clean_k] += v
 
 clean_employers_h1b_filed['EY'] = clean_employers_h1b_filed['ERNST YOUNG']
+clean_employers_h1b_filed['ZOOM'] = clean_employers_h1b_filed["ZOOM VIDEO"]
 
 sorted_keys = sorted(list(clean_employers_h1b_filed.keys()))
 print(sorted_keys[0])
