@@ -23,6 +23,9 @@ for year in range(2022, 2019, -1):
         else:
             employers_filed_h1b[employer_name] = h1b_filed
 
+with open('./H1B-checker/data/raw-data.json', 'w') as fp:
+    json.dump(employers_filed_h1b, fp)
+
 
 word_freq = {}
 
